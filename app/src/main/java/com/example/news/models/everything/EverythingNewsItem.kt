@@ -6,6 +6,6 @@ import com.google.gson.annotations.SerializedName
 data class EverythingNewsItem(
     @SerializedName("id")
     override val id: Int,
-    @SerializedName("tittle")
+    @SerializedName("title")
     val tittle: String
 ) : IBaseDiffModel<Int>

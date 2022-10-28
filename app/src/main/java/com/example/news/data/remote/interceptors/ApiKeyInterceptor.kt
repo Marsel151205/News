@@ -5,7 +5,11 @@ import okhttp3.Response
 
 class ApiKeyInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-        val request = chain.request().newBuilder().addHeader("Authorization", "").build()
+        var request = chain.request()
+        val url =
+            request.url.newBuilder()
+                .addQueryParameter("X-Api-Key", "45df755913c947ea82988b1dad81c6e7").build()
+        request = request.newBuilder().url(url).build()
         return chain.proceed(request)
     }
 }

@@ -10,8 +10,8 @@ data class SourcesNewItem(
     val name: String,
     @SerializedName("description")
     val description: String,
-    @SerializedName("category")
-    val category: String,
     @SerializedName("language")
-    val language: String
+    val language: String,
+    @SerializedName("category")
+    val category: String
 ) : IBaseDiffModel<Int>

@@ -7,7 +7,7 @@ import java.net.URL
 data class TopArticlesNewsItem(
     @SerializedName("id")
     override val id: Int,
-    @SerializedName("tittle")
+    @SerializedName("title")
     val tittle: String,
     @SerializedName("urlToImage")
     val image: String
