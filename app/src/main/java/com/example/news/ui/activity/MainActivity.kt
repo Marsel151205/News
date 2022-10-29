@@ -30,15 +30,8 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
-        findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        binding.bottomNavigation
             .setupWithNavController(navController)
 
-        val appBarConfiguration: AppBarConfiguration = AppBarConfiguration.Builder(
-            R.id.everythingFragment,
-            R.id.topArticlesFragment,
-            R.id.sourcesFragment
-        ).build()
-
-        NavigationUI.setupWithNavController(binding.toolbarCustom, navController, appBarConfiguration)
     }
 }
